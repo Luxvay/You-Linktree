@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            overflow: hidden;
+            animation: movingBackground 10s infinite alternate ease-in-out;
+        }
+        @keyframes movingBackground {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
+        }
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 4px solid white;
+            animation: popIn 1.5s ease-in-out;
+        }
+        @keyframes popIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: white;
+        }
+        .link {
+            display: block;
+            background: linear-gradient(45deg, #ff6b6b, #f06595);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .link:hover {
+            background: linear-gradient(45deg, #f06595, #ff6b6b);
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 24px;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: rotate(15deg) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://source.unsplash.com/random/120x120" alt="Profilbild">
+        <h2>Dein Name</h2>
+        <p style="color: white;">Willkommen auf meiner Linktree-Seite!</p>
+        
+        <a class="link" href="#">Mein YouTube-Kanal</a>
+        <a class="link" href="#">Mein Discord-Server</a>
+        <a class="link" href="#">Instagram</a>
+        <a class="link" href="#">TikTok</a>
+        
+        <div class="social-icons">
+            <a href="#">🔵</a>
+            <a href="#">📸</a>
+            <a href="#">🎵</a>
+        </div>
+    </div>
+</body>
+</html>
